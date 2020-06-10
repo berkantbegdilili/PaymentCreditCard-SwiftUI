@@ -1,4 +1,4 @@
-# Payment Credit Card with SwiftUI 
+# Payment with Credit Card (iOS Prototype)
 
 
 #
