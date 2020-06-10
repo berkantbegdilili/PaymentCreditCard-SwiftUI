@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CreditCard
 //
-//  Created by Berkant Beğdilili on 8.06.2020.
+//  Created by Berkant Beğdilili on 9.06.2020.
 //  Copyright © 2020 Berkant Beğdilili. All rights reserved.
 //
 
