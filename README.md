@@ -6,7 +6,7 @@
 
 
 # Imagery (Görüntüler)
-![run1](https://github.com/berkantbegdilili/PaymentCreditCard-SwiftUI/blob/master/img/ss.png)
+![run1](https://github.com/berkantbegdilili/PaymentWithCreditCard-SwiftUI/blob/master/img/ss.png)
 
 
 #
