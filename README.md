@@ -2,7 +2,7 @@
 
 
 #
-> Used Frameworks ; SwiftUI,Combine,Alamofire
+> Used Frameworks ; SwiftUI, Combine, Alamofire
 
 
 # Imagery (Görüntüler)
