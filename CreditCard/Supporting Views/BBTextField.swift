@@ -29,6 +29,8 @@ struct BBTextField : UIViewRepresentable {
 
         textField.placeholder = placeHolder
         textField.borderStyle = .roundedRect
+        
+        textField.delegate = context.coordinator
        
         return textField
     }
@@ -66,7 +68,7 @@ struct BBTextField : UIViewRepresentable {
 
     typealias UIViewType = UITextField
 
-    class Coordinator: NSObject {
+    class Coordinator: NSObject,UITextFieldDelegate {
         let owner: BBTextField
         private var subscriber: AnyCancellable
 
@@ -75,18 +77,7 @@ struct BBTextField : UIViewRepresentable {
             subscriber = NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: owner.textField)
                 .sink(receiveValue: { _ in
                 
-                    if owner.isCardNumber {
-                        if owner.textField.text!.count == 4 {
-                            owner.textField.text!.insert(" ", at: owner.textField.text!.index(owner.textField.text!.startIndex, offsetBy: 4))
-                        }
-                        if owner.textField.text!.count == 9 {
-                            owner.textField.text!.insert(" ", at: owner.textField.text!.index(owner.textField.text!.startIndex, offsetBy: 9))
-                        }
-                        if owner.textField.text!.count == 14 {
-                            owner.textField.text!.insert(" ", at: owner.textField.text!.index(owner.textField.text!.startIndex, offsetBy: 14))
-                        }
-                    }
-                    
+  
                     if owner.textField.text!.count > owner.characterLimit ?? 25{
                         owner.textField.text = String(owner.textField.text!.prefix(owner.characterLimit ?? 25))
                     }
@@ -95,6 +86,22 @@ struct BBTextField : UIViewRepresentable {
                     
                 })
             
+        }
+        
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            
+             if owner.isCardNumber {
+                if owner.textField.text!.count == 4 && !string.isEmpty {
+                       owner.textField.text!.insert(" ", at: owner.textField.text!.index(owner.textField.text!.startIndex, offsetBy: 4))
+                   }
+                   if owner.textField.text!.count == 9 && !string.isEmpty {
+                       owner.textField.text!.insert(" ", at: owner.textField.text!.index(owner.textField.text!.startIndex, offsetBy: 9))
+                   }
+                   if owner.textField.text!.count == 14 && !string.isEmpty {
+                       owner.textField.text!.insert(" ", at: owner.textField.text!.index(owner.textField.text!.startIndex, offsetBy: 14))
+                   }
+            }
+            return true
         }
 
         @objc fileprivate func TapDone() {
