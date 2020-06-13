@@ -1,6 +1,12 @@
 # Payment with Credit Card (iOS Prototype)
 
-> Used Frameworks ; SwiftUI, Combine, Alamofire
+#
+> EN: It offers a pleasant user interface with card animation. Improvements to the user experience have been made. The card number entered is sent to the web service. The incoming response is parsed with the JSON format. The interface changes according to the decomposed data.
+#
+> TR: Kart animasyonu ile hoş bir kullanıcı arayüzü sunar. Kullanıcı deneyimine yönelik iyileştirmeler yapılmıştır. Girilen kart numarasını web servise gönderilir. Gelen cevap JSON formatıyla ayrıştırılır. Ayrışan veriler doğrultusunda arayüz değişir.
+
+#
+> Used Frameworks ; SwiftUI, UIKit, Combine, Alamofire
 
 
 [**Go to LinkedIn to watch the video!**](https://www.linkedin.com/feed/update/urn:li:activity:6676341083112267776/ "LinkedIN: berkantbegdilili")
