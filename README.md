@@ -2,6 +2,7 @@
 
 > Used Frameworks ; SwiftUI, Combine, Alamofire
 
+
 [**Go to LinkedIn to watch the video!**](https://www.linkedin.com/feed/update/urn:li:activity:6676341083112267776/ "LinkedIN: berkantbegdilili")
 
 # Imagery (Görüntüler)
