@@ -4,6 +4,7 @@
 #
 > Used Frameworks ; SwiftUI, Combine, Alamofire
 
+[**Go to LinkedIn to watch the video!**](https://www.linkedin.com/feed/update/urn:li:activity:6676341083112267776/ "LinkedIN: berkantbegdilili")
 
 # Imagery (Görüntüler)
 ![run1](https://github.com/berkantbegdilili/PaymentWithCreditCard-SwiftUI/blob/master/img/ss.png)
